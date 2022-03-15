@@ -1,0 +1,274 @@
+.container {
+  margin: 0px 64px;
+  padding: 0px 4px;
+}
+
+.header-container {
+  height: 190px;
+}
+
+.header-container .inner-header {
+  padding-top: 40px;
+}
+
+.header-container .inner-header .logo-col {
+  padding-left: 0;
+}
+
+.location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.location .city {
+  margin-bottom: 10px;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #666666;
+}
+
+.location .city span {
+  color: #cc693e;
+}
+
+.main-container .break-section {
+  height: 44px;
+}
+
+.main-container .break-section .break-dotted-line {
+  width: 160px;
+  border: 2px dashed #cccccc;
+  border-radius: 4px;
+}
+
+.main-container .break-section p {
+  margin: 0;
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 44px;
+  color: #cccccc;
+}
+
+.main-container .break-section p:nth-child(1) {
+  padding-left: 0;
+}
+
+.main-container .break-section p:nth-child(3) {
+  text-align: center;
+}
+
+.main-container .break-section p:last-child {
+  text-align: end;
+}
+
+.main-container .break-section .active {
+  color: #000000;
+}
+
+.main-content {
+  margin-top: 40px;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.main-content .product-section {
+  padding-right: 0px;
+  row-gap: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-content .product-card {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  position: relative;
+}
+
+.main-content .product-card .product-img {
+  width: 185px;
+  height: 215px;
+  padding: 0;
+}
+
+.main-content .product-card .product-img img {
+  width: 100%;
+  height: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px 0px 0px 8px;
+}
+
+.main-content .product-card .close-btn {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 36px;
+  right: 16px;
+  padding: 0;
+  color: #999999;
+  cursor: pointer;
+}
+
+.main-content .product-card .product-info {
+  margin-left: 40px;
+  margin-top: 24px;
+  padding-left: 0px;
+  padding-right: 32px;
+}
+
+.main-content .product-card .product-info .top-info .description {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #666666;
+}
+
+.main-content .product-card .product-info .top-info h2 {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  color: #000000;
+}
+
+.main-content .product-card .product-info .bottom-info {
+  margin-top: 24px;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+}
+
+.main-content .product-card .product-info .bottom-info p {
+  margin: 0;
+}
+
+.main-content .product-card .product-info .bottom-info .product-button .product-count {
+  border: 2px solid #cc693e;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #ffffff;
+}
+
+.main-content .product-card .product-info .bottom-info .product-button .product-count p {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+}
+
+.main-content .product-card .product-info .bottom-info .product-button .count-btn {
+  background: #ffffff;
+  border: 2px solid #cc693e;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #666666;
+  width: 40px;
+  height: 48px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.main-content .product-card .product-info .bottom-info .product-button .decrement {
+  border-radius: 30px 0px 0px 30px;
+}
+
+.main-content .product-card .product-info .bottom-info .product-button .increment {
+  border-radius: 0px 30px 30px 0px;
+}
+
+.main-content .product-card .product-info .bottom-info .price-left {
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-content .product-card .product-info .bottom-info .price-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-content .product-card .product-info .bottom-info .old-price {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.main-content .product-card .product-info .bottom-info .old-price p {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #cccccc;
+}
+
+.main-content .product-card .product-info .bottom-info .new-price {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.promo-box {
+  width: 411px;
+  height: 597px;
+  right: 64px;
+  top: 274px;
+  /* Base / White */
+  background-color: #FFFFFF;
+  /* MD / L3 */
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 4px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+}
+/*# sourceMappingURL=style.css.map */
