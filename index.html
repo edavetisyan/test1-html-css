@@ -14,12 +14,12 @@
 <body>
     <header>
         <div class="container-sm header-container">
-            <div class="row align-items-start inner-header">
+            <div class="row align-items-start inner-header d-flex-md justify-content-between">
                 <div class="col col-3 logo-col">
                     <img src="./assets/logo.png" alt="logo" class="logo">
                 </div>
 
-                <div class="col  ">
+                <div class="col   location-item d-sm-none d-md-none d-lg-block">
                     <div class="location">
                         <i class="fa-solid fa-location-dot"></i>
                         <p class="city"><span>Ховрино</span> Круглосуточно</p>
@@ -28,7 +28,7 @@
                         <span class="tel-number">+7 (495) 980-66-22</span>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col location-item d-sm-none d-md-none d-lg-block">
                     <div class="location">
                         <i class="fa-solid fa-location-dot"></i>
                         <p class="city"><span>Измайлово</span> Круглосуточно</p>
@@ -37,7 +37,7 @@
                         <span class="tel-number">+7 (495) 730-55-66</span>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col location-item d-sm-none d-md-none d-lg-block">
                     <div class="location">
                         <i class="fa-solid fa-location-dot"></i>
                         <p class="city"><span>Мытищи</span> Круглосуточно</p>
@@ -46,7 +46,7 @@
                         <span class="tel-number">+7 (495) 500-40-40</span>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col location-item d-sm-none d-md-none d-lg-block">
                     <div class="location">
                         <i class="fa-solid fa-location-dot"></i>
                         <p class="city"><span>Хор.-Мневники</span> Круглосуточно</p>
@@ -55,6 +55,10 @@
                         <span class="tel-number">+7 (495) 980-66-22</span>
                     </div>
                 </div>
+           
+                <button class="hamburger col-1 	d-sm-block d-lg-none">
+                    <i class="fa-solid fa-bars hamburger-icon .d-none"></i>
+                </button>
             </div>
 
 
@@ -63,15 +67,15 @@
     </header>
     <main>
         <div class="container-sm main-container">
-            <div class="break-section row col-9 align-items-center justify-content-between ">
+            <div class="break-section row col-10 align-items-center justify-content-between ">
                 <p class="col active">Корзина</p>
-                <div class="break-dotted-line col"></div>
-                <p class="col col-4">Оформление заказа</p>
-                <div class="col  break-dotted-line"></div>
+                <div class="break-dotted-line col-2"></div>
+                <p class="col-4">Оформление заказа</p>
+                <div class="col-2  break-dotted-line"></div>
                 <p class="col">Готово</p>
             </div>
-            <div class="main-content row justify-content-between">
-                <div class="product-section justify-content-between col-8">
+            <div class="main-content row">
+                <div class="product-section justify-content-between col">
                     <div class="product-card row ">
                         <i class="close-btn fa-regular fa-circle-xmark fa-xl"></i>
                         <div class="product-img col-2">
@@ -257,8 +261,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="promo-box col">
+                <div class="promo-box col-4 d-none d-lg-block">
+                    <div class="bonus-count col">
+                        <h3><span>+358</span> баллов</h3>
+                    </div>
+                    <div class="bonus-description-sec col">
+                        <p class="bonus-description">Баллы начисляются в течении двух дней и доступны для использования при заказе от 500 руб.
+                            Только для зарегистрированных пользователей.
+                            </p>
+                            <span>Зарегистрируйтесь или войдите.</span>
+                    </div>
+                    <div class="promocode row align-items-center">
+                        <label for="promocode" class="form-label promocode-label">Промокод</label>
+                        <input type="text" id="prmocodeInput" class="form-control"
+                        placeholder="input text"
+                            aria-describedby="passwordHelpBlock">
 
+                        <button type="button" class="btn btn-outline-primary promocode-btn">Применить</button>
+
+                        <div class="order-amount justify-content-center col">
+                            <p class="fs-lg-6">
+                                Сумма заказа:<span class="old-price">4200 </span> <span class="new-price">3580 ₽</span>
+                            </p>
+
+                            <button type="button" class=" row btn btn-primary promocode-submit-btn">Далее</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 

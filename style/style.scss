@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
 $base-black80: #333333;
 $base-black60: #666666;
 $base-black20: #cccccc;
@@ -12,6 +13,15 @@ $black: #000000;
   height: 190px;
   .inner-header {
     padding-top: 40px;
+
+    .hamburger {
+      width: 40px;
+      background: none;
+      border: none;
+      .hamburger-icon {
+        font-size: 40px;
+      }
+    }
     .logo-col {
       padding-left: 0;
     }
@@ -28,6 +38,9 @@ $black: #000000;
     font-size: 12px;
     line-height: 16px;
     color: $base-black60;
+    @media (min-width: 1200px) {
+      white-space: nowrap;
+    }
     span {
       color: $main-brand;
     }
@@ -35,8 +48,20 @@ $black: #000000;
 }
 
 .main-container {
+  padding-left: 0;
   .break-section {
     height: 44px;
+    column-gap: 24px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    @media (max-width: 960px) {
+      width: 348px;
+      overflow: hidden;
+    }
+    .col {
+      padding: 0;
+    }
     .break-dotted-line {
       width: 160px;
       border: 2px dashed $base-black20;
@@ -50,14 +75,18 @@ $black: #000000;
       font-size: 30px;
       line-height: 44px;
       color: $base-black20;
+      @media (max-width: 1200px) {
+        font-size: 20px;
+      }
       &:nth-child(1) {
         padding-left: 0;
       }
       &:nth-child(3) {
         text-align: center;
+        white-space: nowrap;
       }
       &:last-child {
-        text-align: end;
+        text-align: start;
       }
     }
     .active {
@@ -67,8 +96,9 @@ $black: #000000;
 }
 
 .main-content {
-  margin-top: 40px;
   column-gap: 40px;
+  margin-top: 40px;
+
   .product-section {
     padding-right: 0px;
     row-gap: 40px;
@@ -79,32 +109,32 @@ $black: #000000;
     background-color: $base-black10;
     border-radius: 8px;
     position: relative;
+    min-height: 215px;
     .product-img {
       width: 185px;
-      height: 215px;
       padding: 0;
       img {
         width: 100%;
-        height: inherit;
+        height: 100%;
         object-fit: cover;
         border-radius: 8px 0px 0px 8px;
       }
     }
     .close-btn {
-        position: absolute;
+      position: absolute;
       width: 24px;
       height: 24px;
-      top: 36px;
+      top: 38px;
       right: 16px;
       padding: 0;
       color: #999999;
       cursor: pointer;
     }
     .product-info {
-      margin-left: 40px;
-      margin-top: 24px;
-      padding-left: 0px;
+      padding-left: 40px;
       padding-right: 32px;
+      padding-top: 24px;
+      padding-bottom: 5px;
       .top-info {
         .description {
           font-family: "Roboto Slab";
@@ -112,7 +142,11 @@ $black: #000000;
           font-weight: 400;
           font-size: 14px;
           line-height: 20px;
+          margin: 0;
           color: $base-black60;
+          @media (max-width: 1200px) {
+            font-size: 12px;
+          }
         }
 
         h2 {
@@ -122,6 +156,9 @@ $black: #000000;
           font-size: 22px;
           line-height: 32px;
           color: $black;
+          @media (max-width: 1200px) {
+            font-size: 20px;
+          }
         }
       }
       .bottom-info {
@@ -131,13 +168,22 @@ $black: #000000;
           margin: 0;
         }
         .product-button {
+            width: 156px;
+            @media (max-width: 1200px) {
+                // width: 132px;
+              }
           .product-count {
             border: 2px solid $main-brand;
-            height: 100%;
+            height: 48px;
+            width: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #ffffff;
+            @media (max-width: 1200px) {
+               width: 26px;
+               height: 32px;
+              }
             p {
               font-family: "Roboto Slab";
               font-style: normal;
@@ -157,6 +203,11 @@ $black: #000000;
             height: 48px;
             font-size: 18px;
             text-align: center;
+            @media (max-width: 1200px) {
+                width: 26px;
+                height: 32px;
+                font-size: 16px;
+               }
           }
           .decrement {
             border-radius: 30px 0px 0px 30px;
@@ -171,14 +222,15 @@ $black: #000000;
           flex-direction: column;
           align-items: flex-end;
           justify-content: center;
+          width: 60px;
         }
         .price-right {
           display: flex;
           flex-direction: column;
           align-items: flex-end;
           padding: 0px;
+          width: 60px;
           justify-content: center;
-
         }
         .old-price {
           align-self: flex-end;
@@ -189,6 +241,9 @@ $black: #000000;
             font-size: 18px;
             line-height: 24px;
             color: $base-black20;
+            @media (max-width: 1200px) {
+                font-size: 16px;
+              }
           }
         }
         .new-price {
@@ -198,22 +253,144 @@ $black: #000000;
           font-size: 18px;
           line-height: 24px;
           color: $base-black80;
+          @media (max-width: 1200px) {
+            font-size: 16px;
+          }
         }
       }
     }
   }
 }
-.promo-box{
-width: 411px;
-height: 597px;
-right: 64px;
-top: 274px;
 
-/* Base / White */
+.promo-box {
+  height: max-content;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.16),
+    0px 4px 6px rgba(0, 0, 0, 0.16);
+  border-radius: 8px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  //   @media (max-width: 1400px) {
+  //     display: none;
+  //   }
+  .bonus-count {
+    h3 {
+      font-family: "Roboto Slab";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 32px;
+      color: $base-black80;
+      @media (max-width: 1200px) {
+        font-size: 18px;
+      }
+    }
+  }
+  .bonus-description-sec {
+    font-family: "Roboto Slab";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: $base-black80;
+    margin-top: 20px;
+    @media (max-width: 1200px) {
+      font-size: 12px;
+    }
+  }
+  .row {
+    margin: 0;
+  }
+  .promocode {
+    margin: 40px 0px 0px 0px;
+    flex-direction: column;
+    @media (max-width: 1200px) {
+      margin-top: 20px;
+    }
+    .promocode-label {
+      font-family: "Roboto Slab";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 32px;
+      color: $base-black80;
+      @media (max-width: 1200px) {
+        font-size: 18px;
+      }
+    }
+    input {
+      width: 100%;
+      border: 2px solid #808080;
+      border-radius: 30px;
+      @media (max-width: 1200px) {
+        height: 30px;
+      }
+      &::placeholder {
+        font-family: "Roboto Slab";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $base-black20;
+      }
+    }
+    .promocode-btn {
+      width: 160px;
+      height: 40px;
+      background: #ffffff;
+      border: 2px solid $main-brand;
+      box-sizing: border-box;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2),
+        0px 0px 4px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.16);
+      border-radius: 40px;
+      color: $main-brand;
+      align-self: flex-end;
+      margin-top: 16px;
+      &:hover {
+        background-color: $main-brand;
+        color: #ffffff;
+      }
+    }
 
-background-color: #FFFFFF;
-/* MD / L3 */
-
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.16), 0px 4px 6px rgba(0, 0, 0, 0.16);
-border-radius: 8px;
+    .order-amount {
+      margin-top: 40px;
+      padding: 0;
+      p {
+        font-family: "Roboto Slab";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        color: $base-black80;
+        @media (max-width: 1200px) {
+          font-size: 16px;
+        }
+        .old-price {
+          color: $base-black20;
+          text-decoration-line: line-through;
+          margin: 0px 10px;
+        }
+      }
+      .promocode-submit-btn {
+        height: 64px;
+        width: 100%;
+        background: $main-brand;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25),
+          0px 0px 4px rgba(0, 0, 0, 0.16), 0px 4px 6px rgba(0, 0, 0, 0.16);
+        border-radius: 40px;
+        border: none;
+        transition: all 0.15s ease-in-out;
+        font-family: "Roboto Slab";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        padding: 0;
+        &:hover {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
