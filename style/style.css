@@ -49,11 +49,27 @@
   }
 }
 
+.small-icons {
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
+.small-icons .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 8px;
+          column-gap: 8px;
+}
+
 .small-icons .small-icon-item {
   width: 58px;
   height: 40px;
   background: #333333;
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   border-radius: 25px 25px 25px 25px;
   color: #ffffff;
@@ -72,7 +88,7 @@
   background: #cc693e;
   border-radius: 25px 0px 0px 25px;
   border: none;
-  font-family: 'Roboto Slab';
+  font-family: "Roboto Slab";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -234,6 +250,7 @@ h2 {
 @media (max-width: 576px) {
   .gift-title {
     margin-top: 24px;
+    padding-left: 16px;
   }
 }
 
